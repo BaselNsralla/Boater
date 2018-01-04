@@ -21,7 +21,7 @@ class StoreItem extends Component {
 					<Text style={styles.descText}>{`${fToUpperCase(this.props.costType)} ${this.props.cost}`}</Text>
 				</View>
 				<View style={{flex:1}}>
-					<TouchableOpacity style={[styles.button,  this.getButtonStyle()]}>
+					<TouchableOpacity onPress={()=>{this.props.removeItemFromStore({id: this.props.id})}} style={[styles.button,  this.getButtonStyle()]}>
 						<Text style={styles.buttonText}>{this.props.owner ? 'REMOVE' : 'TRADE'}</Text>
 					</TouchableOpacity> 
 				</View>

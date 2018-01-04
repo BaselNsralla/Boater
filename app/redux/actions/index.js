@@ -26,6 +26,12 @@ function addItemToStore(itemObject) {
 	}
 }
 
+function removeItemFromStore(itemObject) {
+	return {
+		type: 'REMOVE_ITEM_FROM_STORE',
+		data: itemObject
+	}
+}
 
 
-export { changeModalState, changeResourceQuantity, changeCreatorModalType, addItemToStore }
+export { changeModalState, changeResourceQuantity, changeCreatorModalType, addItemToStore, removeItemFromStore }

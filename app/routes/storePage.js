@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { View, Text, StyleSheet , Dimensions, FlatList } from 'react-native'
 //<storeProduct />
 import {StoreItem} from '../components'
-import {StoreItemCreatorModal_R} from 'boater/app/redux/components'
+import {StoreItemCreatorModal_R, StoreItem_R} from 'boater/app/redux/components'
 import Resource_R from 'boater/app/redux/components/resource_R'
 //const StoreItemCreatorModal = require('boater/app/components/store-components/storeItemCreatorModal')
 const resources = [{type: 'fire', amount: '1'}, {type: 'water', amount: '2'},{type: 'koala', amount: '3'}, {type: 'fridge', amount: '4'},{type: 'fire2', amount: '5'}]
@@ -29,7 +29,7 @@ class StorePage extends Component {
 				<FlatList
 	  				style={{flex:1}}
 	  				data={this.props.storeList}
-	  				renderItem={({item}) => <StoreItem {...item} owner={true}/>}
+	  				renderItem={({item}) => <StoreItem_R {...item} owner={true}/>}
 	  				keyExtractor={(item)=>Math.random()}
 				/>
 			</View>

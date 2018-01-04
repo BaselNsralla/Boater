@@ -23,7 +23,7 @@ class  StoreItemCreatorModal extends Component {
 
 	saveAndCloseModal = () => {
 		this.props.quantityChange({type: this.state.type, amount: this.state.initalAmount - this.props.resources[this.state.type]})
-		this.props.addItemToStore({costType: this.state.forType, cost: this.state.cost, item: this.state.type, amount: this.props.resources[this.state.type]})
+		this.props.addItemToStore({costType: this.state.forType, cost: this.state.cost, item: this.state.type, amount: this.props.resources[this.state.type], id: Date.now()})
 		this.props.changeModalState(false)
 	}
 
