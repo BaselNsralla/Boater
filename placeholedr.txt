@@ -1,0 +1,20 @@
+import React, {Component} from 'react'
+import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native'
+
+class Class extends Component {
+	render(){
+		return(
+			<View style={styles.container}>
+	
+			</View>
+		)
+	}
+}  
+
+export default Class
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	}
+})
